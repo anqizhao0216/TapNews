@@ -1,9 +1,8 @@
-import './NewsPanel.css';
-import _ from 'lodash';
-
 import React from 'react';
-
+import './NewsPanel.css';
 import NewsCard from '../NewsCard/NewsCard'
+import _ from 'lodash';
+import Auth from '../Auth/Auth';
 
 class NewsPanel extends React.Component{
   constructor() {
@@ -27,10 +26,13 @@ class NewsPanel extends React.Component{
   }
 
   loadMoreNews() {
-    let request = new Request('http://localhost:5000/news', {
+    let request = new Request('http://localhost:3000/news', {
       method: 'GET',
+      headers: {
+        'Authorization': 'bearer ' + Auth.getToken(),
+      },
       cache: 'no-cache',
-      redirect: 'manual'});
+    });
 
     fetch(request)
       .then((res) => res.json())
