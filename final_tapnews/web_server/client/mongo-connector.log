@@ -1,0 +1,30 @@
+2018-07-22 03:42:39,454 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-07-22 03:42:39,455 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609]
+2018-07-22 03:42:39,455 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.13.0-36-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-07-22 03:42:39,455 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.0
+2018-07-22 03:42:39,455 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find /home/anqi/project/tapnews/TapNews/week7/web_server/client/oplog.timestamp, attempting to create an empty progress log
+2018-07-22 03:42:39,491 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 4.0.0
+2018-07-22 03:42:39,491 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-07-22 03:43:01,142 [WARNING] elasticsearch:82 - PUT /config/_mapping/system.sessions [status:404 request:0.046s]
+2018-07-22 03:43:01,143 [ERROR] mongo_connector.oplog_manager:288 - Unable to process oplog document {u'wall': datetime.datetime(2018, 7, 22, 10, 43, 1, 55000), u'h': -2406374059142133397L, u'ts': Timestamp(1532256181, 1), u'o': {u'create': u'system.sessions', u'idIndex': {u'ns': u'config.system.sessions', u'name': u'_id_', u'key': {u'_id': 1}, u'v': 2}}, u'ui': UUID('fc23c78e-caff-4866-87a9-1b809e9dd7b9'), u't': 1L, u'v': 2, u'ns': u'config.$cmd', u'op': u'c'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/mongo_connector/oplog_manager.py", line 283, in run
+    timestamp)
+  File "/usr/local/lib/python2.7/dist-packages/mongo_connector/util.py", line 46, in wrapped
+    reraise(new_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/dist-packages/mongo_connector/util.py", line 35, in wrapped
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/mongo_connector/doc_managers/elastic2_doc_manager.py", line 246, in handle_command
+    "_source": {"enabled": True}
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/client/indices.py", line 289, in put_mapping
+    '_mapping', doc_type), params=params, body=body)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/transport.py", line 307, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/http_urllib3.py", line 93, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/usr/local/lib/python2.7/dist-packages/elasticsearch/connection/base.py", line 105, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+OperationFailed: TransportError(404, u'index_not_found_exception')

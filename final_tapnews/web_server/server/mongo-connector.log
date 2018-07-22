@@ -1,0 +1,17 @@
+2018-07-22 03:01:28,255 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-07-22 03:01:28,257 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609]
+2018-07-22 03:01:28,257 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.13.0-36-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-07-22 03:01:28,257 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.0
+2018-07-22 03:01:28,257 [WARNING] mongo_connector.connector:167 - MongoConnector: Can't find /home/anqi/project/tapnews/TapNews/week7/web_server/server/oplog.timestamp, attempting to create an empty progress log
+2018-07-22 03:01:28,294 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 4.0.0
+2018-07-22 03:01:28,294 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-07-22 03:01:28,296 [ERROR] mongo_connector.connector:373 - No replica set at "localhost:27017"! A replica set is required to run mongo-connector. Shutting down...
+2018-07-22 03:11:37,336 [ALWAYS] mongo_connector.connector:51 - Starting mongo-connector version: 2.5.1
+2018-07-22 03:11:37,341 [ALWAYS] mongo_connector.connector:51 - Python version: 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609]
+2018-07-22 03:11:37,344 [ALWAYS] mongo_connector.connector:51 - Platform: Linux-4.13.0-36-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-07-22 03:11:37,344 [ALWAYS] mongo_connector.connector:51 - pymongo version: 3.7.0
+2018-07-22 03:11:37,389 [ALWAYS] mongo_connector.connector:51 - Source MongoDB version: 4.0.0
+2018-07-22 03:11:37,392 [ALWAYS] mongo_connector.connector:51 - Target DocManager: mongo_connector.doc_managers.elastic2_doc_manager version: 0.3.0
+2018-07-22 03:11:37,399 [ERROR] mongo_connector.connector:373 - No replica set at "localhost:27017"! A replica set is required to run mongo-connector. Shutting down...
